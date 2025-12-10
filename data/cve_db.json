@@ -1,0 +1,169 @@
+[
+  {
+    "product": "nginx",
+    "version": "1.18.0",
+    "cve_id": "CVE-2021-23017",
+    "severity": "high",
+    "cvss": 7.5,
+    "summary": "Nginx resolver vulnerability that can lead to memory corruption in certain configurations.",
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2021-23017"
+    ]
+  },
+  {
+    "product": "apache",
+    "version": "2.4.49",
+    "cve_id": "CVE-2021-41773",
+    "severity": "high",
+    "cvss": 7.5,
+    "summary": "Path traversal and possible remote code execution in Apache HTTP Server 2.4.49.",
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2021-41773"
+    ]
+  },
+  {
+    "product": "apache",
+    "version": "2.4.50",
+    "cve_id": "CVE-2021-42013",
+    "severity": "critical",
+    "cvss": 9.8,
+    "summary": "Path traversal and possible remote code execution in Apache HTTP Server 2.4.50.",
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2021-42013"
+    ]
+  },
+  {
+    "product": "php",
+    "version": "7.4.0",
+    "cve_id": "CVE-2019-11043",
+    "severity": "critical",
+    "cvss": 9.8,
+    "summary": "PHP-FPM remote code execution under certain Nginx configurations.",
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2019-11043"
+    ]
+  },
+  {
+    "product": "wordpress",
+    "version": "5.7.0",
+    "cve_id": "CVE-2021-29447",
+    "severity": "high",
+    "cvss": 8.0,
+    "summary": "Object injection issue via PHAR deserialization in WordPress.",
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2021-29447"
+    ]
+  },
+  {
+    "product": "wordpress",
+    "version": "5.8.0",
+    "cve_id": "CVE-2021-39203",
+    "severity": "medium",
+    "cvss": 6.5,
+    "summary": "Authenticated stored XSS in WordPress block editor in certain contexts.",
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2021-39203"
+    ]
+  },
+  {
+    "product": "drupal",
+    "version": "8.7.0",
+    "cve_id": "CVE-2019-6339",
+    "severity": "high",
+    "cvss": 8.1,
+    "summary": "Drupal core remote code execution vulnerability under specific configurations.",
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2019-6339"
+    ]
+  },
+  {
+    "product": "joomla",
+    "version": "3.9.0",
+    "cve_id": "CVE-2018-15880",
+    "severity": "medium",
+    "cvss": 6.5,
+    "summary": "Privilege escalation in Joomla! core due to inadequate access control checks.",
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2018-15880"
+    ]
+  },
+  {
+    "product": "django",
+    "version": "2.2.0",
+    "cve_id": "CVE-2019-12308",
+    "severity": "medium",
+    "cvss": 6.5,
+    "summary": "Potential directory traversal in Django when serving files in certain configurations.",
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2019-12308"
+    ]
+  },
+  {
+    "product": "rails",
+    "version": "5.2.0",
+    "cve_id": "CVE-2018-3741",
+    "severity": "high",
+    "cvss": 7.5,
+    "summary": "ActiveSupport vulnerability allowing possible remote code execution in Ruby on Rails.",
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2018-3741"
+    ]
+  },
+  {
+    "product": "laravel",
+    "version": "8.4.0",
+    "cve_id": "CVE-2021-3129",
+    "severity": "high",
+    "cvss": 7.5,
+    "summary": "Laravel Ignition debug mode vulnerability enabling remote code execution in misconfigured environments.",
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2021-3129"
+    ]
+  },
+  {
+    "product": "spring",
+    "version": "5.3.0",
+    "cve_id": "CVE-2022-22965",
+    "severity": "critical",
+    "cvss": 9.8,
+    "summary": "Spring4Shell remote code execution vulnerability in Spring MVC / Spring WebFlux applications.",
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2022-22965"
+    ]
+  },
+  {
+    "product": "node",
+    "version": "14.0.0",
+    "cve_id": "CVE-2021-44531",
+    "severity": "medium",
+    "cvss": 6.5,
+    "summary": "Node.js HTTP request smuggling vulnerability in specific reverse proxy setups.",
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2021-44531"
+    ]
+  },
+  {
+    "product": "express",
+    "version": "4.17.0",
+    "cve_id": "CVE-2019-5428",
+    "severity": "medium",
+    "cvss": 5.9,
+    "summary": "Open redirect issue in Express applications when certain user input is reflected in redirects without validation.",
+    "references": [
+      "https://nvd.nist.gov/vuln/detail/CVE-2019-5428"
+    ]
+  },
+  {
+    "product": "astro",
+    "version": "1.0.0",
+    "cve_id": "CVE-2099-00001",
+    "severity": "info",
+    "cvss": 0.0,
+    "summary": "Example placeholder CVE for Astro-based applications for demo purposes only.",
+    "references": [
+      "https://example.com"
+    ]
+  }
+]
+
+
