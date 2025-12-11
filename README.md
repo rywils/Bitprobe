@@ -1,7 +1,6 @@
 ![Alt text](./bitprobe.png "Nexprobe")
 # BitProbe
 
-## Key files are omitted for private repo and client deployments - public repo is not usable
 
 ---
 
