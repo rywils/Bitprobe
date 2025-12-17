@@ -10,9 +10,9 @@ This repository contains the **public interface and demonstration shell** of Bit
 
 ---
 
-## 🔍 Features
+## Features
 
-### ✅ Public Demonstration Features (This Repository)
+### Public Demonstration Features (This Repository)
 
 - Passive technology fingerprinting (frameworks, languages, CDN, analytics)
 - Network port enumeration
@@ -28,7 +28,7 @@ This repository contains the **public interface and demonstration shell** of Bit
 
 ---
 
-### 🔒 Private / Enterprise Engine Features (Not Publicly Released)
+### Private / Enterprise Engine Features (Not Publicly Released)
 
 These features exist in the private BitProbe engine used for real client assessments and internal research:
 
@@ -48,10 +48,10 @@ These features exist in the private BitProbe engine used for real client assessm
 - Incident replay modeling
 - Threat emulation staging
 
-> ⚠️ These advanced systems remain proprietary and are **not included** in the public repository for security and intellectual property protection.
+>  These advanced systems remain proprietary and are **not included** in the public repository for security and intellectual property protection.
 
 
-## 🚀 Example Usage
+## Example Usage
 
 ```bash
 python3 bitprobe.py \
@@ -61,14 +61,14 @@ python3 bitprobe.py \
 
 ---
 
-## ⚠️ Security Notice
+## Security Notice
 
 This repository does NOT contain exploit code or active offensive tooling.
 It is intended for defensive security testing, portfolio demonstration, and educational research only.
 
 Unauthorized use against systems you do not own or have permission to test is prohibited.
 
-## 📄 License
+## License
 
 MIT License — Public interface only. Core engine remains proprietary.
 
