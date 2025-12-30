@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>NexProbe Scan Dashboard</title>
+    <title>BitProbe Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Chart.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {
@@ -238,8 +237,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>NexProbe SOC Dashboard</h1>
-        <p class="subtitle">Historical overview of security assessments performed by NexProbe.</p>
+        <h1>BitProbe Dashboard</h1>
+        <p class="subtitle">Overview of security assessments performed by BitProbe.</p>
 
         <div class="header-row">
             <div class="filters">
@@ -309,7 +308,7 @@
     </div>
 
     <script>
-        const SCAN_DATA = [{"client_name": "ryanwilsonio", "target": "https://ryanwilson.io", "scan_id": "scan_20251210_004553", "timestamp": "2025-12-10T00:46:08.437398", "risk": {"raw_score": 23.65, "normalized_score": 22.5, "level": "medium"}, "totals": {"findings": 7, "by_severity": {"critical": 0, "high": 0, "medium": 4, "low": 2, "info": 1}}, "output_directory": "/Users/regded/code/bitprobe/scan_results/ryanwilsonio_2025-12-10_00-45-53"}, {"client_name": "ryanwilsonio", "target": "https://ryanwilson.io", "scan_id": "scan_20251210_030119", "timestamp": "2025-12-10T03:01:34.652581", "risk": {"raw_score": 23.65, "normalized_score": 22.5, "level": "medium"}, "totals": {"findings": 7, "by_severity": {"critical": 0, "high": 0, "medium": 4, "low": 2, "info": 1}}, "output_directory": "/Users/regded/code/bitprobe/scan_results/ryanwilsonio_2025-12-10_03-01-19"}, {"client_name": "Unknown Client", "target": "https://ryanwilson.io", "scan_id": "scan_20251210_140205", "timestamp": "2025-12-10T14:02:20.973857", "risk": {}, "totals": {"findings": 7, "by_severity": {"critical": 0, "high": 0, "medium": 4, "low": 2, "info": 1}}, "output_directory": "/Users/regded/code/bitprobe/scan_results/Unknown_Client_2025-12-10_14-02-05"}];
+        const SCAN_DATA = [/*SCAN_DATA_PLACEHOLDER*/];
 
         function normalizeLevel(level) {
             if (!level) return "NONE";
@@ -620,7 +619,7 @@
             renderSeverityChart(filtered);
         }
 
-        // Init
+        // init
         document.addEventListener("DOMContentLoaded", () => {
             populateFilters();
             redrawEverything();

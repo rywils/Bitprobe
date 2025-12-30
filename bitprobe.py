@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 import argparse
 import json
 import os
@@ -59,9 +57,7 @@ def main():
 
     args = parser.parse_args()
 
-    # -----------------------------
-    # LOAD CONFIG
-    # -----------------------------
+    # this loads the config
     if args.config:
         config = ScanConfig.from_yaml(args.config)
     elif args.target:
@@ -70,18 +66,14 @@ def main():
     else:
         parser.error("Either --target or --config must be specified")
 
-    # -----------------------------
-    # CLIENT / TARGET NAME PROMPT
-    # -----------------------------
+    # prompt for report purposes
     client_name = input("Enter Company/Target Name (for report labeling): ").strip()
     if not client_name:
         client_name = "Unknown Client"
 
     config.client_name = client_name
 
-    # -----------------------------
-    # OUTPUT DIRECTORY NAMING
-    # -----------------------------
+    
     safe_name = re.sub(r"[^a-zA-Z0-9_-]+", "_", client_name)
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
@@ -91,15 +83,11 @@ def main():
     if args.output:
         config.output_formats = [args.output]
 
-    # -----------------------------
-    # RUN SCAN
-    # -----------------------------
+    # begin scan
     engine = ScanEngine(config)
     report = engine.run_scan()
 
-    # -----------------------------
-    # SAVE RAW JSON
-    # -----------------------------
+   #save 
     os.makedirs(config.output_directory, exist_ok=True)
 
     raw_json_path = os.path.join(config.output_directory, "raw.json")
@@ -108,9 +96,7 @@ def main():
 
     print(f"\n[+] Raw JSON report saved to: {raw_json_path}")
 
-    # -----------------------------
-    # GENERATE MARKDOWN REPORT
-    # -----------------------------
+    # generate markdown report
     md_generator = MarkdownReportGenerator(
         report_data=report,
         output_directory=config.output_directory,
@@ -120,9 +106,7 @@ def main():
     md_path = md_generator.generate()
     print(f"[+] Markdown report generated: {md_path}")
 
-    # -----------------------------
-    # GENERATE PDF REPORT
-    # -----------------------------
+    #generate pdf report
     pdf_generator = PDFReportGenerator(
         report_data=report,
         output_directory=config.output_directory,
@@ -132,9 +116,7 @@ def main():
     pdf_path = pdf_generator.generate()
     print(f"[+] PDF report generated: {pdf_path}")
 
-    # -----------------------------
-    # UPDATE HISTORY + DASHBOARD
-    # -----------------------------
+   # update dashboard and update the history
     history_path = os.path.join(args.report_dir, "scan_history.json")
     history_entries = update_scan_history(history_path, client_name, report, output_dir)
 

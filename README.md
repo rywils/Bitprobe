@@ -4,51 +4,42 @@
 
 ---
 
-**BitProbe** is a modular security reconnaissance and vulnerability assessment framework designed for continuous web, network, and TLS analysis. It is built for developers, security researchers, and consultants who want visibility into their attack surface using tooling they fully control.
+**BitProbe** is a modular security reconnaissance and vulnerability assessment framework designed for continuous web, network, and TLS analysis. 
 
-This repository contains the **public interface and demonstration shell** of BitProbe. The full scanning engine, correlation systems, and proprietary analysis modules are maintained privately.
+This repository contains the **public demonstration** of BitProbe. The full scanning engine and remainder of the project remains private.
 
 ---
 
 ## Features
 
-### Public Demonstration Features (This Repository)
+### Public Current State (This Repository)
 
-- Passive technology fingerprinting (frameworks, languages, CDN, analytics)
-- Network port enumeration
-- TLS configuration and certificate analysis
-- Security header inspection
-- Sensitive file exposure testing
-- Demonstration CVE correlation
-- Professional reporting:
-  - JSON
-  - Markdown
-  - PDF
-  - HTML dashboard
 
+- Passive technology fingerprinting (server, framework, CDN, analytics, WAF)
+- Network port enumeration and basic service identification
+- TLS configuration and certificate inspection
+- Security header analysis
+- Sensitive file and misconfiguration detection
+- CVE correlation using a local vulnerability database
+- Automated attack-chain correlation
+- Client-ready structured output (JSON)
+- Transparent risk scoring per finding
+- Non-intrusive scanning only
 ---
 
-### Private / Enterprise Engine Features (Not Publicly Released)
+### Private / Current State (Not Publicly Released)
 
-These features exist in the private BitProbe engine used for real client assessments and internal research:
-
-- Full CVE database ingestion with version-level matching
-- Proprietary attack chain correlation engine
-- Automated kill-chain construction (recon → access → escalation → impact)
-- Dynamic risk scoring with weighted exploit likelihood
-- MITRE ATT&CK technique mapping
-- Business impact modeling
-- Lateral movement simulation
-- Internal attack surface analysis
-- Zero-trust segmentation validation
-- Patch priority queuing
-- Continuous monitoring mode
-- Autonomous remediation guidance
-- Executive-level reporting workflows
-- Incident replay modeling
-- Threat emulation staging
-
->  These advanced systems remain proprietary and are **not included** in the public repository for security and intellectual property protection.
+- Crawls web targets with depth control and URL limits
+- Runs all plugins by default at root, scoped intelligently for subpaths
+- Detects and flags edge/CDN infrastructure explicitly
+- Preserves edge findings instead of suppressing the
+- Calculates raw risk scores before edge filtering
+- Calculates adjusted risk scores after edge context
+- Differentiates origin vs edge findings (edge_infrastructure=true)
+- Correlates findings into basic attack chains
+- Uses weighted risk scoring (impact × likelihood, normalized)
+- Produces defensible, auditable findings suitable for client delivery
+>  These remain proprietary and are **not included** in the public repository.
 
 
 ## Example Usage
