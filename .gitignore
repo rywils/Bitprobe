@@ -1,0 +1,12 @@
+env/
+venv/
+__pycache__/
+*.pyc
+scan_results/
+reports/
+scanner/engine.py
+scanner/plugins/
+scanner/analysis/
+scanner/risk/
+scanner/data/
+data/

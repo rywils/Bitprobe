@@ -1,26 +1,9 @@
-import os
-import json
-from typing import List, Dict
-
-
-class DashboardGenerator:
-    def __init__(self, history_entries: List[Dict], base_report_dir: str):
-        self.history_entries = history_entries
-        self.base_report_dir = base_report_dir
-
-    def generate(self) -> str:
-        output_path = os.path.join(self.base_report_dir, "dashboard.html")
-
-        data_json = json.dumps(self.history_entries)
-
-        # We avoid f-strings so we don't have to escape all the { } in CSS/JS.
-        html = """<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>NexProbe Scan Dashboard</title>
+    <title>BitProbe Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Chart.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {
@@ -254,8 +237,8 @@ class DashboardGenerator:
 </head>
 <body>
     <div class="container">
-        <h1>NexProbe SOC Dashboard</h1>
-        <p class="subtitle">Historical overview of security assessments performed by NexProbe.</p>
+        <h1>BitProbe Dashboard</h1>
+        <p class="subtitle">Overview of security assessments performed by BitProbe.</p>
 
         <div class="header-row">
             <div class="filters">
@@ -325,7 +308,7 @@ class DashboardGenerator:
     </div>
 
     <script>
-        const SCAN_DATA = __SCAN_DATA__;
+        const SCAN_DATA = [/*SCAN_DATA_PLACEHOLDER*/];
 
         function normalizeLevel(level) {
             if (!level) return "NONE";
@@ -636,7 +619,7 @@ class DashboardGenerator:
             renderSeverityChart(filtered);
         }
 
-        // Init
+        // init
         document.addEventListener("DOMContentLoaded", () => {
             populateFilters();
             redrawEverything();
@@ -644,12 +627,3 @@ class DashboardGenerator:
     </script>
 </body>
 </html>
-"""
-
-        html = html.replace("__SCAN_DATA__", data_json)
-
-        os.makedirs(self.base_report_dir, exist_ok=True)
-        with open(output_path, "w", encoding="utf-8") as f:
-            f.write(html)
-
-        return output_path

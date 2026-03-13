@@ -2,9 +2,9 @@ from typing import Dict
 import re
 
 def fingerprint_technologies(response) -> Dict:
-    """
-    Given a requests.Response, return a dict of detected technologies.
-    """
+
+    #Given a requests.Response, return a dict of detected technologies
+
     tech = {}
     headers = response.headers
     body = response.text.lower() if response.text else ""
